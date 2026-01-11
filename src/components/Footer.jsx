@@ -1,104 +1,69 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A368A] text-white py-12">
-      <div className="max-w-7xl mx-auto px-5">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Column 1: VIYOM */}
+    <footer className="bg-blue-800 text-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* TOP FOOTER GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* BRAND */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">VIYOM</h3>
-            <p className="text-white/90 leading-relaxed">
+            <h3 className="text-xl font-serif mb-4">VIYOM</h3>
+            <p className="text-blue-200 text-sm">
               Transparent donation platform for Siddhagiri Math and spiritual organizations. Your contributions make a real difference.
             </p>
           </div>
-          
-          {/* Column 2: Quick Links */}
+
+          {/* QUICK LINKS */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="list-none space-y-2">
+            <h4 className="font-medium mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Home
-                </a>
+                <Link to="/" className="text-blue-200 hover:text-white">Home</Link>
               </li>
               <li>
-                <a href="#donate" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Donate Now
-                </a>
+                <Link to="/donate" className="text-blue-200 hover:text-white">Donate Now</Link>
               </li>
               <li>
-                <a href="#track" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Track Donations
-                </a>
+                <Link to="/donations" className="text-blue-200 hover:text-white">Track Donations</Link>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  About Us
-                </a>
+                <a href="#" className="text-blue-200 hover:text-white">About Us</a>
               </li>
             </ul>
           </div>
-          
-          {/* Column 3: Our Causes */}
+
+          {/* OUR CAUSES */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Our Causes</h4>
-            <ul className="list-none space-y-2">
-              <li>
-                <a href="#gaushala" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Gaushala Care
-                </a>
-              </li>
-              <li>
-                <a href="#education" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Education Support
-                </a>
-              </li>
-              <li>
-                <a href="#healthcare" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Healthcare Services
-                </a>
-              </li>
-              <li>
-                <a href="#women" className="text-white/80 hover:text-white transition-colors duration-300 no-underline">
-                  Women Empowerment
-                </a>
-              </li>
+            <h4 className="font-medium mb-4">Our Causes</h4>
+            <ul className="space-y-2 text-sm">
+              <li><span className="text-blue-200">Gaushala Care</span></li>
+              <li><span className="text-blue-200">Education Support</span></li>
+              <li><span className="text-blue-200">Healthcare Services</span></li>
+              <li><span className="text-blue-200">Women Empowerment</span></li>
             </ul>
           </div>
-          
-          {/* Column 4: Contact */}
+
+          {/* CONTACT */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Contact</h4>
-            <ul className="list-none space-y-3">
-              <li className="flex items-start gap-2">
-                <span className="text-xl">📞</span>
-                <span className="text-white/80">+91 12345 67890</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-xl">📧</span>
-                <span className="text-white/80">donate@viyom.org</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-xl">📍</span>
-                <span className="text-white/80">Siddhagiri Math, Maharashtra</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-xl">🌐</span>
-                <span className="text-white/80">www.siddhagirimatham.org</span>
-              </li>
+            <h4 className="font-medium mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm text-blue-200">
+              <li>📞 +91 12345 67890</li>
+              <li>📧 donate@viyom.org</li>
+              <li>📍 Siddhagiri Math, Maharashtra</li>
+              <li>🌐 www.siddhagirimatham.org</li>
             </ul>
           </div>
         </div>
-        
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/60">
-            <p>&copy; 2024 VIYOM - Siddhagiri Math. All rights reserved.</p>
-            <div className="flex gap-4">
-              <a href="#privacy" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
-              <a href="#terms" className="hover:text-white transition-colors duration-300">Terms of Service</a>
-              <a href="#certificate" className="hover:text-white transition-colors duration-300">80G Certificate</a>
+
+        {/* BOTTOM BAR */}
+        <div className="border-t border-blue-700 mt-8 pt-8 text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
+            <p>© 2024 VIYOM - Siddhagiri Math. All rights reserved.</p>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <a href="#" className="hover:text-white">Privacy Policy</a>
+              <a href="#" className="hover:text-white">Terms of Service</a>
+              <a href="#" className="hover:text-white">80G Certificate</a>
             </div>
           </div>
         </div>
@@ -108,4 +73,3 @@ const Footer = () => {
 }
 
 export default Footer
-
